@@ -5,6 +5,6 @@ trackid=$(playerctl metadata mpris:trackid)
 if [[ "$trackid" == *"org/ncspot"* ]]; then
     artist=$(playerctl metadata xesam:artist)
     title=$(playerctl metadata xesam:title)
-    echo "<span color='#ffffff' >$artist </span>- $title "
+    echo "$artist - $title "
     exit 0
 fi

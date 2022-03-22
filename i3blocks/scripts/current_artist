@@ -1,0 +1,8 @@
+#!/bin/sh
+trackid=$(playerctl metadata mpris:trackid)
+
+if [[ "$trackid" == *"org/ncspot"* ]]; then
+    artist=$(playerctl metadata xesam:artist)     
+    echo "$artist -"
+    exit 0
+fi

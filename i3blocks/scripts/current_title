@@ -1,0 +1,8 @@
+#!/bin/sh
+
+trackid=$(playerctl metadata mpris:trackid)
+if [[ "$trackid" == *"org/ncspot"* ]]; then
+    title=$(playerctl metadata xesam:title | cut --delimiter="-" -f 1)
+    echo "$title"
+    exit 0
+fi

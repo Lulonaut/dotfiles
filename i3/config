@@ -161,7 +161,6 @@ exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 exec --no-startup-id pipewire
 exec --no-startup-id pipewire-pulse
 exec --no-startup-id pipewire-media-session
-exec --no-startup-id bitw serve
 exec --no-startup-id discord-canary
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b --no-fading-openclose -I 1 -O 1
 exec --no-startup-id dunst

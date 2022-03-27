@@ -37,6 +37,12 @@ if ($BLOCK_INSTANCE) {
 }
 
 sub playerctl {
+    my $status = qx(playerctl status 2>/dev/null);
+    chomp $status;
+    if ($status ne "Playing") {
+        return
+    }
+
     my $trackid = qx(playerctl metadata mpris:trackid 2>/dev/null);
     chomp $trackid;
     

@@ -37,7 +37,6 @@ BG_COLOR="#111111"
 HLFG_COLOR="#111111"
 HLBG_COLOR="#bbbbbb"
 BORDER_COLOR="#222222"
-
 # Options not related to colors (most rofi options do not work anymore)
 ROFI_OPTIONS=(-theme ~/.config/rofi/powermenu.rasi)
 # Zenity options
@@ -63,7 +62,6 @@ where:
     -p  preferred launcher (rofi or zenity)
 
 This script depends on:
-  - systemd,
   - i3,
   - rofi or zenity."
 
@@ -103,21 +101,15 @@ function command_exists() {
   command -v "$1" &> /dev/null 2>&1
 }
 
-# systemctl required
-if ! command_exists systemctl ; then
-  exit 1
-fi
-
 # menu defined as an associative array
 typeset -A menu
 
 # Menu with keys/commands
 
 menu=(
-  [ Shutdown]="systemctl poweroff"
-  [ Reboot]="systemctl reboot"
-  [ Suspend]="systemctl suspend"
-  [ Lock]="~/.config/i3/scripts/blur-lock.sh"
+  [ Shutdown]="doas openrc-shutdown --poweroff 0"
+  [ Reboot]="doas openrc-shutdown --reboot 0"
+  [ Lock]="i3lock-fancy"
   [ Logout]="loginctl terminate-user "lulonaut""
   [ Cancel]=""
 )

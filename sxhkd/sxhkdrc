@@ -1,0 +1,14 @@
+super + F9
+	playerctl play-pause
+
+ctrl + Print
+	flameshot screen -c
+
+super + e 
+	alacritty --command lf
+
+super + b
+	$BROWSER
+
+super + Return
+	alacritty

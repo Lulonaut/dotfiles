@@ -5,7 +5,7 @@ XF86AudioNext
 	playerctl next
 
 XF86AudioPrev
-	playerctl previos
+	playerctl previous
 
 XF86AudioLowerVolume
 	pactl set-sink-volume 0 -1%
@@ -30,3 +30,6 @@ super + g
 
 XF86AudioMute
 	pactl set-sink-mute 0 toggle
+
+XF86Mail
+	~/applications/bin/mail

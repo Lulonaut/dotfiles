@@ -1,5 +1,17 @@
-super + F9
+XF86AudioPlay
 	playerctl play-pause
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previos
+
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -1%
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +1%
 
 ctrl + Print
 	flameshot screen -c
@@ -12,3 +24,9 @@ super + b
 
 super + Return
 	alacritty
+
+super + g
+	pcmanfm
+
+XF86AudioMute
+	pactl set-sink-mute 0 toggle

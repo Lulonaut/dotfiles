@@ -33,3 +33,18 @@ XF86AudioMute
 
 XF86Mail
 	~/applications/bin/mail
+
+ctrl + alt + 7
+	xdotool keyup ctrl alt 7 key 92+7
+
+super + alt + Left
+	xdotool mousemove_relative -- -1 0
+
+super + alt + Right
+	xdotool mousemove_relative -- 1 0
+
+super + alt + Up
+	xdotool mousemove_relative -- 0 -1
+	
+super + alt + Down
+	xdotool mousemove_relative -- 0 1

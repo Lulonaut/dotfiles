@@ -45,3 +45,6 @@ super + alt + Up
 	
 super + alt + Down
 	xdotool mousemove_relative -- 0 1
+
+super + Down
+	gtabst

@@ -26,7 +26,7 @@ super + Return
 	alacritty
 
 super + g
-	pcmanfm
+	thunar
 
 XF86AudioMute
 	pactl set-sink-mute 0 toggle
@@ -48,3 +48,7 @@ super + alt + Down
 
 super + Down
 	gtabst
+
+#numpad 1
+super + KP_End
+	mbunofficialrelease super KP_End
